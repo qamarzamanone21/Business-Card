@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telecom Engineering Company - System Integrator & Solutions</title>
+    <title>Qamar U Zaman | Telecom Engineering Company - Digital Business Card & Booking</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,8 +16,8 @@
                             darkred: '#9A0007',
                             lightred: '#FFEBEE',
                             charcoal: '#212121',
-                            gray: '#757575',
-                            lightgray: '#F5F5F5'
+                            gray: '#616161',
+                            lightgray: '#F8F9FA'
                         }
                     },
                     fontFamily: {
@@ -33,806 +33,377 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .card-shadow { box-shadow: 0 10px 30px -5px rgba(211, 47, 47, 0.1); }
-        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .card-glass { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); }
         .badge-pulse {
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: .6; }
+            50% { opacity: .5; }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-tec-charcoal antialiased flex flex-col min-h-screen">
+<body class="bg-gray-100 text-tec-charcoal antialiased flex flex-col min-h-screen">
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo & Title -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-full border-2 border-tec-red flex items-center justify-center font-bold text-2xl text-tec-red shadow-inner bg-tec-lightred/50">
-                        <span class="relative -top-0.5">T</span>
-                    </div>
-                    <div>
-                        <div class="flex items-center space-x-1">
-                            <span class="font-extrabold text-xl tracking-tight text-tec-charcoal">Telecom Engineering</span>
-                            <span class="text-xs font-semibold px-1.5 py-0.5 bg-tec-red text-white rounded">Co.</span>
-                        </div>
-                        <p class="text-xs font-medium text-tec-gray tracking-wider uppercase">System Integrator</p>
-                    </div>
+    <!-- Top Sticky Bar / Quick Action Hub -->
+    <header class="sticky top-0 z-50 bg-tec-charcoal text-white shadow-md border-b-2 border-tec-red">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-tec-red text-white flex items-center justify-center font-black text-xl shadow">
+                    T
                 </div>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
-                    <a href="#about" class="hover:text-tec-red transition-colors py-2">About Us</a>
-                    <a href="#services" class="hover:text-tec-red transition-colors py-2">Solutions</a>
-                    <a href="#partners" class="hover:text-tec-red transition-colors py-2">Partners</a>
-                    <a href="#vcard" class="hover:text-tec-red transition-colors py-2">Digital Card</a>
-                    <a href="#booking" class="hover:text-tec-red transition-colors py-2">Book Consultation</a>
-                </nav>
-
-                <!-- Action Button -->
-                <div class="hidden sm:flex items-center space-x-3">
-                    <a href="https://wa.me/923115531210" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition shadow-sm">
-                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Direct Chat
-                    </a>
-                    <a href="#booking" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-tec-red hover:bg-tec-darkred transition shadow-sm">
-                        <i class="far fa-calendar-check mr-2"></i> Book Audit
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-gray-600 hover:text-tec-red focus:outline-none p-2" aria-label="Toggle Navigation">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                <div>
+                    <h1 class="font-bold text-sm sm:text-base leading-tight">Telecom Engineering Co.</h1>
+                    <p class="text-[11px] text-tec-lightred font-medium">System Integrator</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 pt-2 pb-4 space-y-2 shadow-lg">
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tec-red hover:bg-tec-lightred">About Us</a>
-            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tec-red hover:bg-tec-lightred">Solutions & Brands</a>
-            <a href="#vcard" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-tec-red hover:bg-tec-lightred">Digital Business Card</a>
-            <a href="#booking" class="block px-3 py-2 rounded-md text-base font-medium text-tec-red font-semibold hover:bg-tec-lightred">Book Site Survey / Consultation</a>
-            <a href="https://wa.me/923115531210" target="_blank" class="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-green-600 text-white">
-                <i class="fab fa-whatsapp mr-2"></i> WhatsApp: +92 311 5531210
-            </a>
+            
+            <div class="flex items-center space-x-2">
+                <button onclick="downloadVCard()" class="px-3 py-1.5 bg-tec-red hover:bg-tec-darkred text-white rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1">
+                    <i class="fas fa-address-card"></i>
+                    <span class="hidden sm:inline">Save vCard</span>
+                </button>
+                <a href="https://wa.me/923115531210" target="_blank" class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+                <button onclick="shareDigitalCard()" class="p-1.5 bg-white/10 hover:bg-white/20 text-white rounded-lg text-xs transition" title="Share Card">
+                    <i class="fas fa-share-alt text-sm px-1"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-gray-900 via-tec-charcoal to-tec-darkred text-white py-16 lg:py-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Hero Text -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-xs sm:text-sm font-medium">
-                        <span class="w-2.5 h-2.5 rounded-full bg-green-400 badge-pulse"></span>
-                        <span>ISO 9001:2008 Registered System Integrator</span>
-                    </div>
-                    
-                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                        Enterprise Security, Fire Safety & <span class="text-tec-red underline decoration-tec-red/50">BMS Automation</span>
-                    </h1>
-                    
-                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
-                        Telecom Engineering Company delivers world-class industrial system integration, complete fire suppression (FM200, NOVEC, INERGEN), Honeywell security, and Alerton Building Management Systems across Pakistan.
-                    </p>
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 space-y-6 flex-grow">
 
-                    <!-- Contact & CTA Buttons -->
-                    <div class="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-                        <a href="#booking" class="px-6 py-3.5 bg-tec-red hover:bg-tec-darkred font-semibold rounded-lg shadow-lg hover:shadow-tec-red/30 transition duration-200 flex items-center space-x-2 text-white">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Schedule Live Booking</span>
+        <!-- DIGITAL BUSINESS CARD HERO SECTION -->
+        <section class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden relative">
+            <div class="h-28 bg-gradient-to-r from-tec-charcoal via-gray-800 to-tec-darkred relative p-4 flex justify-between items-start">
+                <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md text-white text-[11px] font-bold rounded-full border border-white/20 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-green-400 badge-pulse"></span>
+                    ISO 9001:2008 REGISTERED
+                </span>
+                <span class="text-white/60 text-xs font-mono">TEC-PK</span>
+            </div>
+
+            <div class="px-6 pb-6 pt-0 relative">
+                <!-- Profile Avatar Icon -->
+                <div class="-mt-12 mb-4 flex justify-between items-end">
+                    <div class="w-24 h-24 rounded-2xl bg-tec-red border-4 border-white shadow-md flex items-center justify-center text-white font-extrabold text-4xl">
+                        QUZ
+                    </div>
+                    <div class="flex space-x-2 pb-1">
+                        <a href="tel:+923115531210" class="p-2.5 bg-tec-lightred text-tec-red hover:bg-tec-red hover:text-white rounded-xl transition shadow-sm" title="Call Cell">
+                            <i class="fas fa-phone-alt text-base"></i>
                         </a>
-                        <a href="https://wa.me/923115531210?text=Hello%20Qamar%20U%20Zaman,%20I%20am%20interested%20in%20System%20Integration%20solutions." target="_blank" class="px-6 py-3.5 bg-green-600 hover:bg-green-700 font-semibold rounded-lg shadow-lg transition duration-200 flex items-center space-x-2 text-white">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                            <span>WhatsApp Executive</span>
+                        <a href="mailto:qamar@tec.com.pk" class="p-2.5 bg-tec-lightred text-tec-red hover:bg-tec-red hover:text-white rounded-xl transition shadow-sm" title="Send Email">
+                            <i class="fas fa-envelope text-base"></i>
                         </a>
-                        <a href="tel:+923115531210" class="px-5 py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 font-semibold rounded-lg transition duration-200 flex items-center space-x-2 text-white">
-                            <i class="fas fa-phone-alt text-tec-red"></i>
-                            <span>Call +92 311 553 1210</span>
+                        <button onclick="copyToClipboard('qamar@tec.com.pk', 'Email copied to clipboard!')" class="p-2.5 bg-gray-100 text-tec-charcoal hover:bg-gray-200 rounded-xl transition shadow-sm" title="Copy Details">
+                            <i class="fas fa-copy text-base"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Executive & Company Info -->
+                <div class="space-y-1">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-tec-charcoal">Qamar U Zaman</h2>
+                    <p class="text-tec-red font-bold text-sm sm:text-base">Business Development Executive</p>
+                    <p class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Telecom Engineering Company (System Integrator)</p>
+                </div>
+
+                <!-- Quick Action Buttons Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-6">
+                    <a href="tel:+923115531210" class="flex items-center justify-center space-x-2 py-2.5 bg-tec-charcoal hover:bg-black text-white rounded-xl text-xs font-bold transition shadow">
+                        <i class="fas fa-mobile-alt text-tec-red"></i>
+                        <span>Call Cell</span>
+                    </a>
+                    <a href="https://wa.me/923115531210?text=Hello%20Qamar%20U%20Zaman,%20I%20have%20an%20inquiry%20regarding%20System%20Integration." target="_blank" class="flex items-center justify-center space-x-2 py-2.5 bg-green-600 hover:bg-green-700 text-white rounded-xl text-xs font-bold transition shadow">
+                        <i class="fab fa-whatsapp text-sm"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:qamar@tec.com.pk" class="flex items-center justify-center space-x-2 py-2.5 bg-tec-red hover:bg-tec-darkred text-white rounded-xl text-xs font-bold transition shadow">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Us</span>
+                    </a>
+                    <button onclick="downloadVCard()" class="flex items-center justify-center space-x-2 py-2.5 bg-gray-200 hover:bg-gray-300 text-tec-charcoal rounded-xl text-xs font-bold transition">
+                        <i class="fas fa-download"></i>
+                        <span>vCard</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION WITH PROMINENT OFFICIAL WEBSITE BANNER -->
+        <section id="about" class="bg-white rounded-2xl p-6 shadow-md border border-gray-200 space-y-4">
+            <div class="flex items-center space-x-2 border-b border-gray-100 pb-3">
+                <i class="fas fa-building text-tec-red text-lg"></i>
+                <h3 class="text-lg font-bold text-tec-charcoal">About Telecom Engineering Company</h3>
+            </div>
+
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                <strong>Telecom Engineering Company</strong> is an <strong>ISO 9001:2008 Registered System Integrator</strong> based in Karachi, Pakistan. We specialize in the turnkey engineering, installation, testing, and lifecycle maintenance of enterprise security, fire detection, clean agent fire suppression, and building automation systems.
+            </p>
+
+            <!-- PROMINENT OFFICIAL WEBSITE DIRECT BANNER LINK -->
+            <div class="bg-gradient-to-r from-tec-lightred via-red-50 to-white border-2 border-tec-red/40 rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                <div class="flex items-center space-x-3.5 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-full bg-tec-red text-white flex items-center justify-center text-xl shrink-0 shadow">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold tracking-widest text-tec-red uppercase block">Official Corporate Portal</span>
+                        <a href="http://www.tec.com.pk" target="_blank" class="text-base sm:text-xl font-extrabold text-tec-charcoal hover:text-tec-red transition underline decoration-tec-red/40">
+                            www.tec.com.pk
                         </a>
-                    </div>
-
-                    <!-- Key Executive Info Pill -->
-                    <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-xs text-gray-300">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-user-tie text-tec-red text-sm"></i>
-                            <span>Contact: <strong>Qamar U Zaman</strong> (Business Development Executive)</span>
-                        </div>
-                        <span class="hidden sm:inline text-gray-500">•</span>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-tec-red text-sm"></i>
-                            <span>Karachi-75530, Pakistan</span>
-                        </div>
+                        <p class="text-[11px] text-gray-600 mt-0.5">Explore full solution catalogs, technical datasheets, and company profile.</p>
                     </div>
                 </div>
-
-                <!-- Right Hero: Quick Contact Card Preview -->
-                <div class="lg:col-span-5">
-                    <div class="glass-card rounded-2xl p-6 sm:p-8 text-tec-charcoal shadow-2xl border border-white/40 relative">
-                        <div class="absolute -top-3 -right-3 bg-tec-red text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                            OFFICIAL CARD
-                        </div>
-
-                        <div class="border-b pb-4 mb-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h3 class="text-2xl font-extrabold text-tec-charcoal">Qamar U Zaman</h3>
-                                    <p class="text-tec-red font-semibold text-sm">Business Development Executive</p>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-xs font-bold tracking-widest text-gray-400 uppercase block">ISO CERTIFIED</span>
-                                    <span class="text-xs font-semibold text-gray-700">9001:2008</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <ul class="space-y-3 text-xs sm:text-sm text-gray-700 mb-6">
-                            <li class="flex items-center space-x-3">
-                                <i class="fas fa-envelope text-tec-red w-5 text-center"></i>
-                                <a href="mailto:qamar@tec.com.pk" class="hover:underline font-medium">qamar@tec.com.pk</a>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <i class="fas fa-mobile-alt text-tec-red w-5 text-center"></i>
-                                <span>Cell/WhatsApp: <strong class="text-tec-charcoal">+92 311 553 1210</strong></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <i class="fas fa-phone text-tec-red w-5 text-center"></i>
-                                <span>Tel: +92 (21) 3278 7711, 22, 33, 44</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <i class="fas fa-fax text-tec-red w-5 text-center"></i>
-                                <span>Fax: +92 (21) 3279 1115</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <i class="fas fa-globe text-tec-red w-5 text-center"></i>
-                                <a href="http://www.tec.com.pk" target="_blank" class="hover:underline font-medium text-tec-red">www.tec.com.pk</a>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <i class="fas fa-building text-tec-red w-5 text-center mt-0.5"></i>
-                                <span>Suite # 101, 1st Floor, Sea Breeze Plaza, Shareea-e-Faisal, Karachi-75530.</span>
-                            </li>
-                        </ul>
-
-                        <div class="grid grid-cols-2 gap-2">
-                            <button onclick="downloadVCard()" class="w-full py-2 bg-tec-charcoal hover:bg-black text-white rounded text-xs font-semibold transition flex items-center justify-center space-x-1">
-                                <i class="fas fa-vcard"></i>
-                                <span>Save vCard</span>
-                            </button>
-                            <button onclick="copyContactDetails()" class="w-full py-2 bg-gray-200 hover:bg-gray-300 text-tec-charcoal rounded text-xs font-semibold transition flex items-center justify-center space-x-1">
-                                <i class="fas fa-copy"></i>
-                                <span>Copy Details</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
+                <a href="http://www.tec.com.pk" target="_blank" class="px-5 py-2.5 bg-tec-red hover:bg-tec-darkred text-white text-xs font-bold rounded-lg shadow transition flex items-center space-x-2 shrink-0">
+                    <span>Visit Official Site</span>
+                    <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Partner Brands & Technical Integration Portfolio -->
-    <section id="partners" class="py-12 bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-xs font-bold uppercase tracking-wider text-tec-gray mb-8">Authorized System Integration & Partner Brands</p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+        <!-- STREAMLINED CONTACT GRID SECTION -->
+        <section class="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
+            <div class="flex items-center space-x-2 border-b border-gray-100 pb-3 mb-4">
+                <i class="fas fa-address-book text-tec-red text-lg"></i>
+                <h3 class="text-lg font-bold text-tec-charcoal">Complete Contact Information</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 
-                <!-- Honeywell Security -->
-                <div class="p-4 border rounded-xl hover:shadow-md transition text-center bg-gray-50 flex flex-col items-center justify-center h-28">
-                    <span class="text-tec-red font-black text-xl tracking-tight">Honeywell</span>
-                    <span class="text-xs font-semibold text-gray-600 tracking-wide uppercase">Security Group</span>
-                    <span class="text-[10px] text-gray-400 mt-1">CCTV & Access Control</span>
-                </div>
-
-                <!-- Morley IAS Fire System -->
-                <div class="p-4 border border-tec-red/20 rounded-xl hover:shadow-md transition text-center bg-tec-lightred/20 flex flex-col items-center justify-center h-28">
-                    <div class="flex items-center space-x-1">
-                        <i class="fas fa-fire text-tec-red text-sm"></i>
-                        <span class="font-bold text-gray-800 text-sm">MORLEY IAS</span>
+                <!-- Cell / WhatsApp -->
+                <div onclick="copyToClipboard('+923115531210', 'Cell number copied!')" class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 hover:border-tec-red transition cursor-pointer flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-green-100 text-green-700 flex items-center justify-center text-base shrink-0">
+                        <i class="fab fa-whatsapp"></i>
                     </div>
-                    <span class="text-xs font-bold text-tec-red">FIRE SYSTEM</span>
-                    <span class="text-[10px] text-gray-500">By Honeywell</span>
-                </div>
-
-                <!-- Alerton BMS -->
-                <div class="p-4 border rounded-xl hover:shadow-md transition text-center bg-gray-50 flex flex-col items-center justify-center h-28">
-                    <span class="font-extrabold text-blue-900 text-lg tracking-widest">ALERTON</span>
-                    <span class="text-xs font-semibold text-gray-700">Building Management Systems</span>
-                    <span class="text-[10px] text-gray-400">By Honeywell</span>
-                </div>
-
-                <!-- Gielle Fire Suppression -->
-                <div class="p-4 border border-red-200 rounded-xl hover:shadow-md transition text-center bg-red-50/50 flex flex-col items-center justify-center h-28">
-                    <span class="font-extrabold text-tec-red text-lg tracking-wider border-b border-tec-red pb-0.5">GIELLE</span>
-                    <span class="text-[10px] font-bold text-gray-700 mt-1">FM200 • NOVEC • INERGEN</span>
-                    <span class="text-[10px] text-gray-500">Fire Suppression Systems</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Services & Solutions Section -->
-    <section id="services" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-tec-red tracking-widest uppercase">System Engineering Expertise</h2>
-                <p class="text-3xl font-extrabold text-tec-charcoal mt-1">Specialized Solutions & Integrations</p>
-                <p class="text-gray-600 mt-2 text-sm sm:text-base">We provide end-to-end design, installation, testing, and lifecycle maintenance for high-value facility infrastructure.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Service 1: Fire Alarm Systems -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition border border-gray-200 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-tec-lightred text-tec-red rounded-lg flex items-center justify-center text-xl mb-4">
-                            <i class="fas fa-bell"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-tec-charcoal mb-2">Morley-IAS Fire Alarm Systems</h3>
-                        <p class="text-gray-600 text-sm mb-4">Intelligent addressable fire detection, smoke sensors, and emergency voice alarm systems powered by Honeywell Morley-IAS technology.</p>
-                        <ul class="text-xs space-y-2 text-gray-600 mb-6">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Addressable Panels & Smoke Detectors</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> High Sensitivity Aspirating Detection</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Voice Evacuation Integration</li>
-                        </ul>
+                        <span class="text-[10px] text-gray-500 uppercase font-semibold block">Mobile / WhatsApp</span>
+                        <span class="font-bold text-tec-charcoal text-sm">+92 311 553 1210</span>
                     </div>
-                    <button onclick="preselectBooking('Fire Alarm Systems')" class="w-full py-2 text-sm font-semibold text-tec-red border border-tec-red rounded-lg hover:bg-tec-red hover:text-white transition">
-                        Book Service / Inspection
-                    </button>
                 </div>
 
-                <!-- Service 2: BMS Alerton -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition border border-gray-200 flex flex-col justify-between">
+                <!-- Office Direct Landline -->
+                <div onclick="copyToClipboard('+922132787711', 'Telephone numbers copied!')" class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 hover:border-tec-red transition cursor-pointer flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-tec-lightred text-tec-red flex items-center justify-center text-base shrink-0">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
                     <div>
-                        <div class="w-12 h-12 bg-blue-50 text-blue-800 rounded-lg flex items-center justify-center text-xl mb-4">
-                            <i class="fas fa-building-user"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-tec-charcoal mb-2">Alerton BMS & Automation</h3>
-                        <p class="text-gray-600 text-sm mb-4">Comprehensive Building Management Systems for HVAC control, energy efficiency monitoring, and smart building operation.</p>
-                        <ul class="text-xs space-y-2 text-gray-600 mb-6">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> BACnet Native Controllers</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Energy Optimization & HVAC Tuning</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Centralized Workstation Monitoring</li>
-                        </ul>
+                        <span class="text-[10px] text-gray-500 uppercase font-semibold block">Office Telephone</span>
+                        <span class="font-bold text-tec-charcoal text-xs sm:text-sm">+92 (21) 3278 7711, 22, 33, 44</span>
                     </div>
-                    <button onclick="preselectBooking('Building Management Systems (BMS)')" class="w-full py-2 text-sm font-semibold text-tec-red border border-tec-red rounded-lg hover:bg-tec-red hover:text-white transition">
-                        Book BMS Consultation
-                    </button>
                 </div>
 
-                <!-- Service 3: Fire Suppression GIELLE -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition border border-gray-200 flex flex-col justify-between">
+                <!-- Email Address -->
+                <div onclick="copyToClipboard('qamar@tec.com.pk', 'Email copied!')" class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 hover:border-tec-red transition cursor-pointer flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-base shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
                     <div>
-                        <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center text-xl mb-4">
-                            <i class="fas fa-fire-extinguisher"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-tec-charcoal mb-2">Gielle Clean Agent Suppression</h3>
-                        <p class="text-gray-600 text-sm mb-4">Certified gas suppression solutions tailored for server rooms, data centers, and critical infrastructure using FM200, NOVEC 1230 & INERGEN.</p>
-                        <ul class="text-xs space-y-2 text-gray-600 mb-6">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> FM200 & Novec 1230 Clean Agents</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> INERGEN Inert Gas Systems</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Hydrostatic Cylinder Testing & Refilling</li>
-                        </ul>
+                        <span class="text-[10px] text-gray-500 uppercase font-semibold block">Email Address</span>
+                        <span class="font-bold text-tec-charcoal text-sm">qamar@tec.com.pk</span>
                     </div>
-                    <button onclick="preselectBooking('Fire Suppression (FM200 / NOVEC)')" class="w-full py-2 text-sm font-semibold text-tec-red border border-tec-red rounded-lg hover:bg-tec-red hover:text-white transition">
-                        Book Suppression Survey
-                    </button>
                 </div>
 
-                <!-- Service 4: Honeywell Security -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition border border-gray-200 flex flex-col justify-between">
+                <!-- Fax Number -->
+                <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-lg bg-gray-200 text-gray-700 flex items-center justify-center text-base shrink-0">
+                        <i class="fas fa-fax"></i>
+                    </div>
                     <div>
-                        <div class="w-12 h-12 bg-gray-100 text-tec-charcoal rounded-lg flex items-center justify-center text-xl mb-4">
-                            <i class="fas fa-shield-halved"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-tec-charcoal mb-2">Honeywell Security & Access Control</h3>
-                        <p class="text-gray-600 text-sm mb-4">Integrated IP CCTV surveillance, biometric access control, perimeter security, and intrusion detection systems.</p>
-                        <ul class="text-xs space-y-2 text-gray-600 mb-6">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Enterprise CCTV Surveillance</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Turnstiles & Biometric RFID Access</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Intrusion Alarm Systems</li>
-                        </ul>
+                        <span class="text-[10px] text-gray-500 uppercase font-semibold block">Fax Number</span>
+                        <span class="font-bold text-tec-charcoal text-sm">+92 (21) 3279 1115</span>
                     </div>
-                    <button onclick="preselectBooking('Security & Access Control')" class="w-full py-2 text-sm font-semibold text-tec-red border border-tec-red rounded-lg hover:bg-tec-red hover:text-white transition">
-                        Book Security Survey
-                    </button>
                 </div>
 
-                <!-- Service 5: System Integration & Maintenance -->
-                <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition border border-gray-200 flex flex-col justify-between lg:col-span-2">
-                    <div>
-                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center text-xl mb-4">
-                            <i class="fas fa-sliders"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-tec-charcoal mb-2">Turnkey System Integration & SLA Audits</h3>
-                        <p class="text-gray-600 text-sm mb-4">Unifying multi-vendor sub-systems into a single coherent command platform. We offer Annual Maintenance Contracts (AMC), ISO-certified safety audits, and 24/7 technical emergency assistance.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600 mb-6">
-                            <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Annual Maintenance Contracts (AMC)</div>
-                            <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Third-Party Safety Audits</div>
-                            <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Legacy System Upgrades</div>
-                            <div class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Emergency Fault Diagnosis</div>
-                        </div>
-                    </div>
-                    <button onclick="preselectBooking('System Integration & Maintenance Audit')" class="w-full py-2.5 text-sm font-semibold bg-tec-charcoal text-white rounded-lg hover:bg-black transition">
-                        Schedule Integration Audit
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- LIVE BOOKING & CONSULTATION APPLICATION SECTION -->
-    <section id="booking" class="py-16 bg-white border-t border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="px-3 py-1 bg-tec-lightred text-tec-red rounded-full text-xs font-extrabold uppercase tracking-widest">Interactive Booking System</span>
-                <h2 class="text-3xl font-extrabold text-tec-charcoal mt-3">Book a Service, Site Survey or Consultation</h2>
-                <p class="text-gray-600 text-sm mt-2">Fill in your requirements below. The app calculates estimated response parameters and dispatches your booking formatted straight to <strong>Qamar U Zaman</strong> via WhatsApp or direct logging.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Booking Form -->
-                <div class="lg:col-span-7 bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
-                    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
-                        
-                        <!-- 1. Service Selection -->
+                <!-- Physical Office Address -->
+                <div class="sm:col-span-2 p-4 bg-tec-charcoal text-white rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt text-tec-red text-lg mt-0.5"></i>
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">1. Select Service Category <span class="text-tec-red">*</span></label>
-                            <select id="booking-service" onchange="updateBookingCalc()" required class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-tec-red focus:border-tec-red text-sm font-medium">
-                                <option value="" disabled selected>Choose a service solution...</option>
-                                <option value="Fire Alarm Systems">Morley IAS Fire Alarm Systems (Honeywell)</option>
-                                <option value="Building Management Systems (BMS)">Alerton Building Management Systems (BMS)</option>
-                                <option value="Fire Suppression (FM200 / NOVEC)">Gielle Clean Agent Suppression (FM200/NOVEC/INERGEN)</option>
-                                <option value="Security & Access Control">Honeywell Security & Access Control</option>
-                                <option value="System Integration & Maintenance Audit">System Integration & Maintenance AMC Audit</option>
-                            </select>
-                        </div>
-
-                        <!-- 2. Date & Time -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Preferred Date <span class="text-tec-red">*</span></label>
-                                <input type="date" id="booking-date" required onchange="updateBookingCalc()" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-tec-red focus:border-tec-red text-sm font-medium">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Preferred Time Slot <span class="text-tec-red">*</span></label>
-                                <select id="booking-time" required onchange="updateBookingCalc()" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-tec-red focus:border-tec-red text-sm font-medium">
-                                    <option value="Morning (09:00 AM - 12:00 PM)">Morning (09:00 AM - 12:00 PM)</option>
-                                    <option value="Afternoon (01:00 PM - 04:00 PM)">Afternoon (01:00 PM - 04:00 PM)</option>
-                                    <option value="Late Afternoon (04:00 PM - 06:00 PM)">Late Afternoon (04:00 PM - 06:00 PM)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- 3. Contact Details -->
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Your Full Name / Company Contact <span class="text-tec-red">*</span></label>
-                                <input type="text" id="booking-name" placeholder="e.g. Engr. Tariq Mahmood (K-Electric / Engro)" required class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-tec-red">
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">WhatsApp / Phone Number <span class="text-tec-red">*</span></label>
-                                    <input type="tel" id="booking-phone" placeholder="e.g. +92 300 1234567" required class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-tec-red">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Email Address</label>
-                                    <input type="email" id="booking-email" placeholder="name@company.com" class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-tec-red">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Site / Facility Address (City & Location)</label>
-                                <input type="text" id="booking-location" placeholder="e.g. Plot 42, Korangi Industrial Area, Karachi" class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-tec-red">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Project Scope / Technical Notes</label>
-                                <textarea id="booking-notes" rows="3" placeholder="Describe requirements, system size, brand preferences, or emergency fault details..." class="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-tec-red"></textarea>
-                            </div>
-                        </div>
-
-                        <!-- Action Buttons -->
-                        <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                            <button type="submit" class="flex-1 py-3.5 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-md transition flex items-center justify-center space-x-2">
-                                <i class="fab fa-whatsapp text-xl"></i>
-                                <span>Submit Booking via WhatsApp</span>
-                            </button>
-                            <button type="button" onclick="saveBookingLocally()" class="py-3.5 px-5 bg-tec-charcoal hover:bg-black text-white font-semibold rounded-lg transition flex items-center justify-center space-x-2">
-                                <i class="fas fa-save"></i>
-                                <span>Save Locally</span>
-                            </button>
-                        </div>
-
-                    </form>
-                </div>
-
-                <!-- Live Summary Calculator & Booking Tracker Card -->
-                <div class="lg:col-span-5 space-y-6">
-                    
-                    <!-- Live Dynamic Ticket Summary -->
-                    <div class="bg-gradient-to-br from-tec-charcoal to-gray-900 rounded-2xl p-6 text-white shadow-xl border border-gray-800">
-                        <div class="flex justify-between items-center border-b border-gray-700 pb-3 mb-4">
-                            <div class="flex items-center space-x-2">
-                                <i class="fas fa-receipt text-tec-red"></i>
-                                <span class="font-bold text-sm tracking-wide uppercase">Booking Summary Preview</span>
-                            </div>
-                            <span id="summary-ref" class="text-xs bg-tec-red px-2 py-0.5 rounded font-mono font-bold">REF-TEC-7711</span>
-                        </div>
-
-                        <div class="space-y-3 text-xs sm:text-sm">
-                            <div class="flex justify-between text-gray-300">
-                                <span>Target Company:</span>
-                                <span class="font-semibold text-white">Telecom Engineering Co.</span>
-                            </div>
-                            <div class="flex justify-between text-gray-300">
-                                <span>Executive Lead:</span>
-                                <span class="font-semibold text-white">Qamar U Zaman</span>
-                            </div>
-                            <div class="flex justify-between text-gray-300">
-                                <span>Selected Solution:</span>
-                                <span id="summary-service" class="font-bold text-tec-red">Not Selected</span>
-                            </div>
-                            <div class="flex justify-between text-gray-300">
-                                <span>Schedule:</span>
-                                <span id="summary-schedule" class="font-semibold text-white">Pending Date/Time</span>
-                            </div>
-                            <div class="flex justify-between text-gray-300">
-                                <span>Est. Survey Fee:</span>
-                                <span class="font-bold text-green-400">FREE / Standard Assessment</span>
-                            </div>
-                            <div class="flex justify-between text-gray-300">
-                                <span>ISO Compliance Standard:</span>
-                                <span class="text-gray-300">ISO 9001:2008 Standard Audit</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 p-3 bg-white/5 rounded-lg border border-white/10 text-[11px] text-gray-400">
-                            <i class="fas fa-info-circle text-tec-red mr-1"></i> Clicking 'Submit Booking via WhatsApp' will launch WhatsApp directly with an auto-filled technical specification message ready to send to <strong>+92 311 553 1210</strong>.
+                            <span class="text-[10px] font-bold text-tec-lightred uppercase tracking-wider block">Head Office Address</span>
+                            <p class="text-xs text-gray-200 font-medium leading-snug">
+                                Suite # 101, 1st Floor, Sea Breeze Plaza, Shareea-e-Faisal, Karachi-75530, Pakistan.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Local Booking Tracker / History -->
-                    <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="font-bold text-tec-charcoal text-sm flex items-center">
-                                <i class="fas fa-history text-tec-red mr-2"></i> Local Saved Bookings
-                            </h3>
-                            <button onclick="clearLocalBookings()" class="text-[11px] text-gray-400 hover:text-tec-red underline">Clear History</button>
-                        </div>
-                        
-                        <div id="booking-history-list" class="space-y-2 text-xs max-h-48 overflow-y-auto">
-                            <!-- Populated dynamically via JS -->
-                            <p class="text-gray-400 italic text-center py-4">No recent local bookings saved in browser.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Digital Business Card Section -->
-    <section id="vcard" class="py-16 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-xs font-bold text-tec-red tracking-widest uppercase">Digital Identity</h2>
-                <p class="text-3xl font-extrabold text-tec-charcoal mt-1">Interactive Digital Business Card</p>
-                <p class="text-gray-600 text-sm mt-1">Save contact details directly to your phone contacts or scan the instant profile.</p>
-            </div>
-
-            <!-- Replica Business Card Interface -->
-            <div class="max-w-2xl mx-auto">
-                <div id="visiting-card-container" class="bg-white rounded-xl p-6 sm:p-10 shadow-xl border-t-4 border-tec-red relative overflow-hidden">
-                    
-                    <!-- Top Section: Logo & Company -->
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b-2 border-tec-red pb-6 mb-6 gap-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-14 h-14 rounded-full border-2 border-tec-red flex items-center justify-center font-bold text-3xl text-tec-red bg-tec-lightred">
-                                T
-                            </div>
-                            <div>
-                                <h1 class="text-2xl font-black text-tec-charcoal tracking-tight">Telecom Engineering <span class="text-gray-500 font-normal">Company</span></h1>
-                                <p class="text-xs font-bold tracking-widest text-gray-500 uppercase">System Integrator</p>
-                            </div>
-                        </div>
-                        <div class="bg-gray-100 px-3 py-1 rounded text-right">
-                            <span class="text-[10px] font-bold text-gray-500 block uppercase">ISO Standard</span>
-                            <span class="text-xs font-black text-tec-charcoal">9001:2008 REGISTERED</span>
-                        </div>
-                    </div>
-
-                    <!-- Middle Grid: Contact & Address -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        
-                        <!-- Executive Details -->
-                        <div class="space-y-4">
-                            <div>
-                                <h2 class="text-2xl font-black text-tec-charcoal">Qamar U Zaman</h2>
-                                <p class="text-tec-red font-bold text-sm">Business Development Executive</p>
-                            </div>
-
-                            <ul class="space-y-2.5 text-xs text-gray-700">
-                                <li class="flex items-center space-x-2.5">
-                                    <i class="fas fa-envelope text-tec-red w-4"></i>
-                                    <a href="mailto:qamar@tec.com.pk" class="hover:underline font-semibold text-tec-charcoal">qamar@tec.com.pk</a>
-                                </li>
-                                <li class="flex items-center space-x-2.5">
-                                    <i class="fas fa-mobile-alt text-tec-red w-4"></i>
-                                    <span>Cell: <strong>+92 311 553 1210</strong></span>
-                                </li>
-                                <li class="flex items-center space-x-2.5">
-                                    <i class="fas fa-phone-alt text-tec-red w-4"></i>
-                                    <span>Tel: +92 (21) 3278 7711, 22, 33, 44</span>
-                                </li>
-                                <li class="flex items-center space-x-2.5">
-                                    <i class="fas fa-fax text-tec-red w-4"></i>
-                                    <span>Fax: +92 (21) 3279 1115</span>
-                                </li>
-                                <li class="flex items-center space-x-2.5">
-                                    <i class="fas fa-globe text-tec-red w-4"></i>
-                                    <a href="http://www.tec.com.pk" target="_blank" class="hover:underline text-tec-red font-semibold">www.tec.com.pk</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Office Address -->
-                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-tec-red flex flex-col justify-between">
-                            <div>
-                                <div class="flex items-center space-x-2 text-tec-red mb-2">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span class="text-xs font-bold uppercase tracking-wider">Head Office Location</span>
-                                </div>
-                                <address class="not-italic text-xs text-gray-700 leading-relaxed font-medium">
-                                    Suite # 101, 1st Floor,<br>
-                                    Sea Breeze Plaza,<br>
-                                    Shareea-e-Faisal,<br>
-                                    Karachi-75530, Pakistan.
-                                </address>
-                            </div>
-                            <div class="mt-4 pt-3 border-t border-gray-200">
-                                <a href="https://maps.google.com/?q=Sea+Breeze+Plaza+Shahrah-e-Faisal+Karachi" target="_blank" class="text-xs text-tec-red hover:underline font-semibold flex items-center">
-                                    <i class="fas fa-directions mr-1"></i> Open in Google Maps
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Bottom Bar: Partner Logos Text -->
-                    <div class="border-t border-gray-200 pt-4 flex flex-wrap justify-between items-center text-[11px] text-gray-500 gap-2">
-                        <span><strong>Integrated Brands:</strong> Honeywell Security • Morley IAS • Alerton BMS • Gielle Fire</span>
-                        <div class="flex space-x-2">
-                            <button onclick="downloadVCard()" class="px-3 py-1.5 bg-tec-red text-white font-semibold rounded hover:bg-tec-darkred transition text-xs">
-                                <i class="fas fa-download mr-1"></i> Save Contact vCard
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location & Contact Footer -->
-    <footer class="bg-tec-charcoal text-white pt-12 pb-8 border-t-4 border-tec-red">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                
-                <!-- Col 1: Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 rounded-full border border-tec-red flex items-center justify-center font-bold text-tec-red bg-white">
-                            T
-                        </div>
-                        <span class="font-extrabold text-lg text-white">Telecom Engineering Co.</span>
-                    </div>
-                    <p class="text-xs text-gray-400 leading-relaxed">
-                        Leading System Integrator in Pakistan specializing in Honeywell Fire, Security, BMS Automation, and Gielle Suppression Systems.
-                    </p>
-                    <span class="inline-block text-[10px] bg-white/10 px-2.5 py-1 rounded border border-white/10 font-bold text-gray-300">
-                        ISO 9001:2008 REGISTERED
-                    </span>
-                </div>
-
-                <!-- Col 2: Quick Links -->
-                <div>
-                    <h4 class="text-xs font-bold text-tec-red uppercase tracking-widest mb-4">Quick Navigation</h4>
-                    <ul class="space-y-2 text-xs text-gray-300">
-                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Morley IAS Fire Systems</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Alerton BMS Automation</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Gielle FM200 & Novec</a></li>
-                        <li><a href="#booking" class="hover:text-white transition">Schedule Consultation</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Direct Contact -->
-                <div>
-                    <h4 class="text-xs font-bold text-tec-red uppercase tracking-widest mb-4">Direct Contact</h4>
-                    <ul class="space-y-2 text-xs text-gray-300">
-                        <li><strong>Executive:</strong> Qamar U Zaman</li>
-                        <li><strong>Email:</strong> <a href="mailto:qamar@tec.com.pk" class="hover:underline">qamar@tec.com.pk</a></li>
-                        <li><strong>Cell/WhatsApp:</strong> <a href="https://wa.me/923115531210" class="text-green-400 hover:underline">+92 311 553 1210</a></li>
-                        <li><strong>Tel:</strong> +92 (21) 3278 7711, 22, 33, 44</li>
-                        <li><strong>Fax:</strong> +92 (21) 3279 1115</li>
-                        <li><strong>Web:</strong> <a href="http://www.tec.com.pk" target="_blank" class="hover:underline text-tec-red">www.tec.com.pk</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Location address -->
-                <div>
-                    <h4 class="text-xs font-bold text-tec-red uppercase tracking-widest mb-4">Karachi Address</h4>
-                    <p class="text-xs text-gray-300 leading-relaxed mb-3">
-                        Suite # 101, 1st Floor,<br>
-                        Sea Breeze Plaza, Shareea-e-Faisal,<br>
-                        Karachi-75530, Pakistan.
-                    </p>
-                    <a href="https://wa.me/923115531210?text=Hello%20Qamar%20U%20Zaman,%20please%20send%20office%20location%20pin." target="_blank" class="inline-flex items-center text-xs bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded font-medium transition">
-                        <i class="fab fa-whatsapp mr-1.5"></i> Request Location Pin
+                    <a href="https://maps.google.com/?q=Sea+Breeze+Plaza+Shahrah-e-Faisal+Karachi" target="_blank" class="px-3.5 py-2 bg-tec-red hover:bg-tec-darkred text-white text-xs font-bold rounded-lg transition shrink-0 self-end sm:self-center">
+                        <i class="fas fa-directions mr-1"></i> Google Maps
                     </a>
                 </div>
 
             </div>
+        </section>
 
-            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-                <p>&copy; <span id="year"></span> Telecom Engineering Company (System Integrator). All rights reserved.</p>
+        <!-- CORE SOLUTIONS & AUTHORIZED BRAND PARTNERS -->
+        <section class="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
+            <div class="flex items-center justify-between border-b border-gray-100 pb-3 mb-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-tec-red text-lg"></i>
+                    <h3 class="text-lg font-bold text-tec-charcoal">Core Solutions & Authorized Brands</h3>
+                </div>
+                <span class="text-[10px] font-bold bg-tec-lightred text-tec-red px-2 py-0.5 rounded">ISO 9001:2008</span>
             </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                
+                <!-- Honeywell Security -->
+                <div class="p-3.5 border rounded-xl bg-gray-50 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded bg-red-100 text-tec-red flex items-center justify-center font-bold text-sm shrink-0">
+                        HW
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-tec-charcoal">Honeywell Security Group</h4>
+                        <p class="text-gray-500 text-[11px]">IP CCTV Surveillance, Access Control & Intrusion Security Systems.</p>
+                    </div>
+                </div>
+
+                <!-- Morley IAS -->
+                <div class="p-3.5 border border-tec-red/30 rounded-xl bg-tec-lightred/30 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded bg-tec-red text-white flex items-center justify-center text-sm shrink-0">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-tec-charcoal">Morley-IAS Fire System</h4>
+                        <p class="text-gray-600 text-[11px]">By Honeywell. Intelligent addressable fire detection & voice alarms.</p>
+                    </div>
+                </div>
+
+                <!-- Alerton BMS -->
+                <div class="p-3.5 border rounded-xl bg-gray-50 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0">
+                        BMS
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-tec-charcoal">Alerton BMS Automation</h4>
+                        <p class="text-gray-500 text-[11px]">By Honeywell. Building Management & BACnet HVAC Controls.</p>
+                    </div>
+                </div>
+
+                <!-- Gielle Suppression -->
+                <div class="p-3.5 border rounded-xl bg-gray-50 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded bg-orange-100 text-orange-700 flex items-center justify-center text-sm shrink-0">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-tec-charcoal">Gielle Fire Suppression</h4>
+                        <p class="text-gray-500 text-[11px]">FM200, NOVEC 1230 & INERGEN Clean Agent Protection for Data Centers.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STREAMLINED 1-CLICK WHATSAPP BOOKING FORM -->
+        <section id="booking" class="bg-white rounded-2xl p-6 shadow-md border border-gray-200">
+            <div class="flex items-center space-x-2 border-b border-gray-100 pb-3 mb-4">
+                <i class="far fa-calendar-check text-tec-red text-lg"></i>
+                <div>
+                    <h3 class="text-lg font-bold text-tec-charcoal">Quick Consultation & Site Survey Booking</h3>
+                    <p class="text-xs text-gray-500">Send direct booking details to Qamar U Zaman via WhatsApp in 1 click.</p>
+                </div>
+            </div>
+
+            <form onsubmit="dispatchWhatsAppBooking(event)" class="space-y-4">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Select Solution *</label>
+                        <select id="book-solution" required class="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-xs font-medium focus:ring-2 focus:ring-tec-red">
+                            <option value="Morley IAS Fire Alarm System">Morley IAS Fire Alarm System</option>
+                            <option value="Alerton Building Management (BMS)">Alerton Building Management (BMS)</option>
+                            <option value="Gielle Clean Agent Fire Suppression (FM200/NOVEC)">Gielle Clean Agent Suppression (FM200/NOVEC)</option>
+                            <option value="Honeywell Security & CCTV Access Control">Honeywell Security & CCTV</option>
+                            <option value="System Integration AMC Audit">System Integration AMC Audit</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Preferred Date *</label>
+                        <input type="date" id="book-date" required class="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-xs font-medium focus:ring-2 focus:ring-tec-red">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Your Name / Organization *</label>
+                        <input type="text" id="book-name" placeholder="e.g. Engr. Tariq (Company Name)" required class="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-xs font-medium focus:ring-2 focus:ring-tec-red">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Contact Phone / WhatsApp *</label>
+                        <input type="tel" id="book-phone" placeholder="e.g. +92 300 1234567" required class="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-xs font-medium focus:ring-2 focus:ring-tec-red">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">Facility Address / Brief Scope</label>
+                    <input type="text" id="book-address" placeholder="e.g. Site location in Karachi & brief requirements" class="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-xs font-medium focus:ring-2 focus:ring-tec-red">
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Send Booking via WhatsApp to +92 311 5531210</span>
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-tec-charcoal text-white py-6 border-t-2 border-tec-red mt-auto text-xs text-center">
+        <div class="max-w-4xl mx-auto px-4 space-y-2">
+            <p class="font-bold">Telecom Engineering Company (System Integrator)</p>
+            <p class="text-gray-400">Suite # 101, 1st Floor, Sea Breeze Plaza, Shareea-e-Faisal, Karachi-75530.</p>
+            <p class="text-tec-red font-semibold">Official Website: <a href="http://www.tec.com.pk" target="_blank" class="underline">www.tec.com.pk</a></p>
+            <p class="text-[10px] text-gray-500 pt-2">&copy; Telecom Engineering Company. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Notification Toast Container -->
-    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-tec-charcoal text-white px-5 py-3 rounded-xl shadow-2xl border border-gray-700 flex items-center space-x-3 text-xs sm:text-sm">
-        <i id="toast-icon" class="fas fa-check-circle text-green-400 text-lg"></i>
-        <span id="toast-msg">Action completed successfully.</span>
+    <!-- Toast Feedback Banner -->
+    <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-tec-charcoal text-white px-5 py-2.5 rounded-xl shadow-2xl border border-gray-700 flex items-center space-x-2 text-xs">
+        <i id="toast-icon" class="fas fa-check-circle text-green-400"></i>
+        <span id="toast-msg">Copied to clipboard</span>
     </div>
 
     <!-- JavaScript Logic -->
     <script>
-        // Set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Set minimum date to today for booking
+        const todayStr = new Date().toISOString().split('T')[0];
+        document.getElementById('book-date').value = todayStr;
+        document.getElementById('book-date').setAttribute('min', todayStr);
 
-        // Default set min date for booking to today
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('booking-date').setAttribute('min', today);
-        document.getElementById('booking-date').value = today;
+        // Copy detail to clipboard with toast
+        function copyToClipboard(text, message) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Preselect Service from Cards
-        function preselectBooking(serviceName) {
-            const serviceSelect = document.getElementById('booking-service');
-            serviceSelect.value = serviceName;
-            updateBookingCalc();
-            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
-            showToast(`Selected: ${serviceName}`, 'info');
+            showToast(message || 'Copied to clipboard!');
         }
 
-        // Live Summary Calculator Update
-        function updateBookingCalc() {
-            const service = document.getElementById('booking-service').value || 'Not Selected';
-            const date = document.getElementById('booking-date').value;
-            const time = document.getElementById('booking-time').value;
-
-            document.getElementById('summary-service').textContent = service;
-            document.getElementById('summary-schedule').textContent = date ? `${date} (${time.split(' ')[0]})` : 'Pending Schedule';
-        }
-
-        // Handle WhatsApp Booking Dispatch
-        function handleBookingSubmit(event) {
-            event.preventDefault();
-
-            const service = document.getElementById('booking-service').value;
-            const date = document.getElementById('booking-date').value;
-            const time = document.getElementById('booking-time').value;
-            const name = document.getElementById('booking-name').value;
-            const phone = document.getElementById('booking-phone').value;
-            const email = document.getElementById('booking-email').value || 'N/A';
-            const location = document.getElementById('booking-location').value || 'N/A';
-            const notes = document.getElementById('booking-notes').value || 'None';
-
-            const refId = 'TEC-' + Math.floor(100000 + Math.random() * 900000);
-
-            // Construct Pre-formatted Professional WhatsApp Message
-            const message = `*NEW BOOKING REQUEST - TELECOM ENGINEERING CO.*\n` +
-                `------------------------------------\n` +
-                `*Ref ID:* ${refId}\n` +
-                `*Service:* ${service}\n` +
-                `*Preferred Date:* ${date}\n` +
-                `*Preferred Time:* ${time}\n\n` +
-                `*CLIENT DETAILS*\n` +
-                `• *Name/Company:* ${name}\n` +
-                `• *Phone:* ${phone}\n` +
-                `• *Email:* ${email}\n` +
-                `• *Site Location:* ${location}\n` +
-                `• *Project Scope/Notes:* ${notes}\n\n` +
-                `------------------------------------\n` +
-                `_Sent via Telecom Engineering Web Booking App_`;
-
-            // WhatsApp Direct Link to Qamar U Zaman (+92 311 5531210)
-            const waUrl = `https://wa.me/923115531210?text=${encodeURIComponent(message)}`;
-
-            // Save booking locally as well
-            saveBookingObject({ refId, service, date, time, name, phone, timestamp: new Date().toLocaleDateString() });
-
-            showToast('Opening WhatsApp with pre-filled booking...', 'success');
-
-            // Open WhatsApp in new tab
-            window.open(waUrl, '_blank');
-        }
-
-        // Save Booking Locally
-        function saveBookingLocally() {
-            const service = document.getElementById('booking-service').value;
-            const date = document.getElementById('booking-date').value;
-            const time = document.getElementById('booking-time').value;
-            const name = document.getElementById('booking-name').value;
-            const phone = document.getElementById('booking-phone').value;
-
-            if (!service || !name || !phone) {
-                showToast('Please fill required fields (Service, Name, Phone)', 'error');
-                return;
+        // Share Digital Business Card
+        function shareDigitalCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Qamar U Zaman - Telecom Engineering Company',
+                    text: 'Digital Business Card for Qamar U Zaman (Business Development Executive) - Telecom Engineering Co.',
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                copyToClipboard(window.location.href, 'Card link copied to clipboard!');
             }
-
-            const refId = 'TEC-' + Math.floor(100000 + Math.random() * 900000);
-            saveBookingObject({ refId, service, date, time, name, phone, timestamp: new Date().toLocaleDateString() });
-            showToast('Booking saved locally to browser storage!', 'success');
         }
 
-        function saveBookingObject(bookingObj) {
-            let bookings = JSON.parse(localStorage.getItem('tec_bookings') || '[]');
-            bookings.unshift(bookingObj);
-            localStorage.setItem('tec_bookings', JSON.stringify(bookings));
-            renderBookingHistory();
-        }
-
-        function renderBookingHistory() {
-            const listEl = document.getElementById('booking-history-list');
-            let bookings = JSON.parse(localStorage.getItem('tec_bookings') || '[]');
-
-            if (bookings.length === 0) {
-                listEl.innerHTML = `<p class="text-gray-400 italic text-center py-4">No recent local bookings saved in browser.</p>`;
-                return;
-            }
-
-            listEl.innerHTML = bookings.map(b => `
-                <div class="p-2.5 bg-gray-50 rounded border border-gray-200 flex justify-between items-center">
-                    <div>
-                        <span class="font-bold text-tec-charcoal text-[11px] block">${b.service}</span>
-                        <span class="text-[10px] text-gray-500">${b.date} • ${b.name}</span>
-                    </div>
-                    <span class="text-[10px] font-mono bg-tec-lightred text-tec-red font-bold px-1.5 py-0.5 rounded">${b.refId}</span>
-                </div>
-            `).join('');
-        }
-
-        function clearLocalBookings() {
-            localStorage.removeItem('tec_bookings');
-            renderBookingHistory();
-            showToast('History cleared', 'info');
-        }
-
-        // Download vCard (.vcf) functionality
+        // Download vCard
         function downloadVCard() {
             const vCardData = 
 `BEGIN:VCARD
@@ -858,57 +429,48 @@ END:VCARD`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-            showToast('vCard contact file downloaded!', 'success');
+            showToast('vCard contact file downloaded!');
         }
 
-        // Copy contact details to clipboard
-        function copyContactDetails() {
-            const details = `Qamar U Zaman - Business Development Executive
-Telecom Engineering Company (System Integrator)
-Email: qamar@tec.com.pk
-Cell/WhatsApp: +92 311 553 1210
-Tel: +92 (21) 3278 7711
-Website: www.tec.com.pk
-Address: Suite # 101, 1st Floor, Sea Breeze Plaza, Shareea-e-Faisal, Karachi-75530`;
+        // WhatsApp Booking Form Handler
+        function dispatchWhatsAppBooking(e) {
+            e.preventDefault();
 
-            const textarea = document.createElement('textarea');
-            textarea.value = details;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
+            const solution = document.getElementById('book-solution').value;
+            const date = document.getElementById('book-date').value;
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const address = document.getElementById('book-address').value || 'Not specified';
 
-            showToast('Contact details copied to clipboard!', 'success');
+            const refNo = 'TEC-' + Math.floor(1000 + Math.random() * 9000);
+
+            const msg = `*BOOKING / SITE SURVEY INQUIRY*\n` +
+                `*Ref:* ${refNo}\n` +
+                `------------------------------------\n` +
+                `*Requested Solution:* ${solution}\n` +
+                `*Target Date:* ${date}\n\n` +
+                `*CLIENT DETAILS*\n` +
+                `• *Name/Company:* ${name}\n` +
+                `• *Phone:* ${phone}\n` +
+                `• *Location/Notes:* ${address}\n\n` +
+                `*Official Portal:* www.tec.com.pk`;
+
+            const waUrl = `https://wa.me/923115531210?text=${encodeURIComponent(msg)}`;
+            showToast('Opening WhatsApp...');
+            window.open(waUrl, '_blank');
         }
 
-        // Toast Notification Function
-        function showToast(message, type = 'success') {
+        // Toast display function
+        function showToast(msg) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toast-msg');
-            const toastIcon = document.getElementById('toast-icon');
-
-            toastMsg.textContent = message;
-
-            if (type === 'error') {
-                toastIcon.className = 'fas fa-exclamation-circle text-red-400 text-lg';
-            } else if (type === 'info') {
-                toastIcon.className = 'fas fa-info-circle text-blue-400 text-lg';
-            } else {
-                toastIcon.className = 'fas fa-check-circle text-green-400 text-lg';
-            }
+            toastMsg.textContent = msg;
 
             toast.classList.remove('translate-y-20', 'opacity-0');
-            
             setTimeout(() => {
                 toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3500);
+            }, 3000);
         }
-
-        // Initialize on Load
-        window.onload = function() {
-            updateBookingCalc();
-            renderBookingHistory();
-        };
     </script>
 </body>
 </html>
